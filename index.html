@@ -6,95 +6,117 @@
     <title>Seven Wings - Odisha's Own Clothing Brand</title>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {font-family: 'Arial', sans-serif; line-height: 1.6; color: #333;}
-        .container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
-        header {background: #000; color: #fff; padding: 1rem 0; text-align: center;}
-        .logo {font-size: 2rem; font-weight: bold;}
-        .tagline {font-size: 0.9rem; color: #ccc;}
-        .hero {background: #f4f4f4; padding: 3rem 0; text-align: center;}
-        .hero h1 {font-size: 2.5rem; margin-bottom: 1rem;}
-        .hero p {font-size: 1.2rem; margin-bottom: 2rem;}
-        .btn {display: inline-block; background: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem;}
-        .products {padding: 3rem 0;}
-        .products h2 {text-align: center; margin-bottom: 2rem; font-size: 2rem;}
-        .product-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;}
-        .product {background: white; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-        .product img {width: 100%; height: 300px; object-fit: cover;}
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333;}
+        .header {background: #1a1a1a; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;}
+        .logo img {height: 45px;}
+        .nav a {color: white; text-decoration: none; margin-left: 2rem; font-weight: 500;}
+        .hero {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 5rem 5%;}
+        .hero h1 {font-size: 3rem; margin-bottom: 1rem;}
+        .hero p {font-size: 1.3rem; margin-bottom: 2rem;}
+        .btn {background: #25D366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; font-size: 1.1rem;}
+        .products {padding: 4rem 5%; text-align: center;}
+        .products h2 {font-size: 2.5rem; margin-bottom: 3rem;}
+        .product-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;}
+        .product-card {border: 1px solid #ddd; border-radius: 15px; overflow: hidden; transition: transform 0.3s; background: white;}
+        .product-card:hover {transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
+        .product-card img {width: 100%; height: 350px; object-fit: cover;}
         .product-info {padding: 1.5rem;}
         .product-info h3 {margin-bottom: 0.5rem;}
-        .price {font-size: 1.5rem; color: #e44d26; font-weight: bold; margin: 1rem 0;}
-        .features {background: #f9f9f9; padding: 3rem 0; text-align: center;}
-        .features h2 {margin-bottom: 2rem;}
-        .feature-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;}
-        .feature {padding: 1rem;}
-        .feature h3 {margin: 1rem 0;}
-        footer {background: #000; color: white; text-align: center; padding: 2rem 0;}
-        .whatsapp-float {position: fixed; bottom: 20px; right: 20px; z-index: 100;}
-        @media (max-width: 768px) {.hero h1 {font-size: 2rem;}}
+        .price {font-size: 1.5rem; color: #667eea; font-weight: bold; margin: 1rem 0;}
+        .features {background: #f8f9fa; padding: 4rem 5%; text-align: center;}
+        .features h2 {font-size: 2.5rem; margin-bottom: 3rem;}
+        .feature-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;}
+        .feature-box {background: white; padding: 2rem; border-radius: 10px;}
+        .feature-box h3 {margin: 1rem 0; color: #667eea;}
+        .footer {background: #1a1a1a; color: white; text-align: center; padding: 2rem 5%;}
+        @media (max-width: 768px) {
+            .hero h1 {font-size: 2rem;}
+            .nav {display: none;}
+            .logo img {height: 35px;}
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-               <div class="logo">
-       <img src="logo.png" alt="Seven Wings" style="height: 45px;">
-               </div>
-            <div class="tagline">Odisha's Own Clothing Brand</div>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Seven Wings">
         </div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <section class="hero">
-        <div class="container">
-            <h1>Premium Quality, Desi Price</h1>
-            <p>200 GSM Polo & 180 GSM Tees | COD Available All Over Odisha</p>
-            <a href="https://wa.me/916370367166?text=Hi%20Seven%20Wings,%20I%20want%20to%20order" class="btn">Order on WhatsApp</a>
-        </div>
+
+    <section class="hero" id="home">
+        <h1>SEVEN WINGS</h1>
+        <p>Odisha's Own Clothing Brand</p>
+        <h2 style="margin: 2rem 0;">Premium Quality, Desi Price</h2>
+        <p>200 GSM Polo & 180 GSM Tees | COD Available All Over Odisha</p>
+        <br>
+        <a href="https://wa.me/916370367166?text=Hi%20Seven%20Wings,%20I%20want%20to%20order" class="btn">Order on WhatsApp</a>
     </section>
-    <section class="products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="https://i.ibb.co/3kQZQZz/polo-black.jpg" alt="200 GSM Polo">
-                    <div class="product-info">
-                        <h3>200 GSM Premium Polo</h3>
-                        <p>Matty Fabric | Comfort Fit | Perfect for Odisha Weather</p>
-                        <div class="price">₹349 Only</div>
-                        <a href="https://wa.me/916370367166?text=I%20want%20to%20order%20200%20GSM%20Polo%20for%20₹349" class="btn">Buy Now</a>
-                    </div>
+
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="polo1.jpg" alt="Seven Wings Premium Polo">
+                <div class="product-info">
+                    <h3>Premium Polo T-Shirt</h3>
+                    <p>200 GSM | Pure Cotton | Black</p>
+                    <div class="price">₹599</div>
+                    <a href="https://wa.me/916370367166?text=I%20want%20to%20order%20Black%20Polo" class="btn">Buy Now</a>
                 </div>
-                <div class="product">
-                    <img src="https://i.ibb.co/8X8X8X8/tee-black.jpg" alt="180 GSM Tee">
-                    <div class="product-info">
-                        <h3>180 GSM Round Neck Tee</h3>
-                        <p>100% Cotton | Soft Feel | Daily Wear</p>
-                        <div class="price">₹279 Only</div>
-                        <a href="https://wa.me/916370367166?text=I%20want%20to%20order%20180%20GSM%20Tee%20for%20₹279" class="btn">Buy Now</a>
-                    </div>
+            <div class="product-card">
+                <img src="tee1.jpg" alt="Seven Wings Round Neck Tee White">
+                <div class="product-info">
+                    <h3>Classic Round Neck Tee</h3>
+                    <p>180 GSM | 100% Cotton | White</p>
+                    <div class="price">₹399</div>
+                    <a href="https://wa.me/916370367166?text=I%20want%20to%20order%20White%20T-Shirt" class="btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="tee2.jpg" alt="Seven Wings Round Neck Tee Black">
+                <div class="product-info">
+                    <h3>Classic Round Neck Tee</h3>
+                    <p>180 GSM | 100% Cotton | Black</p>
+                    <div class="price">₹399</div>
+                    <a href="https://wa.me/916370367166?text=I%20want%20to%20order%20Black%20T-Shirt" class="btn">Buy Now</a>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="features">
-        <div class="container">
-            <h2>Why Seven Wings?</h2>
-            <div class="feature-grid">
-                <div class="feature"><h3>🚚 COD Available</h3><p>Cash on Delivery all over Odisha</p></div>
-                <div class="feature"><h3>✅ Premium Quality</h3><p>200 GSM & 180 GSM - Export Quality</p></div>
-                <div class="feature"><h3>📍 Odisha Brand</h3><p>From Jagatpur, Cuttack - 754200</p></div>
-                <div class="feature"><h3>💬 Easy Order</h3><p>Just WhatsApp Us - No App Needed</p></div>
+        <h2>Why Seven Wings?</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <h3>🏆 Premium Quality</h3>
+                <p>200 GSM Polo & 180 GSM Tees. No compromise on fabric.</p>
+            </div>
+            <div class="feature-box">
+                <h3>💰 Best Price</h3>
+                <p>Direct from manufacturer. Desi price for desi people.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🚚 COD Available</h3>
+                <p>Cash on Delivery all over Odisha. Order without tension.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🪽 Odisha's Own</h3>
+                <p>Proudly made for Odisha. Support local, wear local.</p>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <p><strong>SEVEN WINGS</strong></p>
-            <p>Jagatpur, Cuttack, Odisha - 754200</p>
-            <p>WhatsApp: +91 63703 67166</p>
-            <p>© 2026 Seven Wings. All Rights Reserved.</p>
-        </div>
+
+    <footer class="footer" id="contact">
+        <h3>SEVEN WINGS</h3>
+        <p>Odisha's Own Clothing Brand</p>
+        <p style="margin: 1rem 0;">📱 WhatsApp: +91 63703 67166</p>
+        <p>📍 Jagatpur, Cuttack - 754200</p>
+        <p style="margin-top: 2rem; opacity: 0.7;">© 2026 Seven Wings. All Rights Reserved.</p>
     </footer>
-    <a href="https://wa.me/916370367166?text=Hi%20Seven%20Wings" class="whatsapp-float">
-        <img src="https://i.ibb.co/N9P0G6n/whatsapp-icon.png" alt="WhatsApp" width="60">
-    </a>
 </body>
 </html>
